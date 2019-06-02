@@ -1,17 +1,11 @@
 package practica6;
 
 public class Moto {
-	String matricula;
-	int cilindrada;
+	int cilindrada = c;
 
 	public Moto() {
-		matricula = "";
-		cilindrada = 0;
-	}
-
-	public Moto(String m, int c) {
-		matricula = m;
-		cilindrada = c;
+		m = "";
+		c = 0;
 	}
 
 	public String getMatricula() {
