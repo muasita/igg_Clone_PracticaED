@@ -1,23 +1,11 @@
 package practica6;
 
+	private static final String MATRICULA = m;
+
 public class Coche {
-	String matricula;
-	String atrib;
-	String modelo;
-	String fabricante;
-
-	public Coche() {
-		matricula = "";
-		atrib = "";
-		modelo = "";
-		fabricante = "";
-	}
-
-	public Coche(String m, String c, String mo, String f) {
-		matricula = m;
-		atrib = c;
-		modelo = mo;
-		fabricante = f;
+	String atrib = c;
+	String modelo = mo;
+	String fabricante = f;
 	}
 
 	public String metodo1() {
@@ -28,12 +16,12 @@ public class Coche {
 		} else if (atrib == "Diesel") {
 			resultado += "El coche con matricula " + matricula + " ";
 			resultado += metodoB(modelo, fabricante);
-		} else if (atrib == "Híbrido") {
+		} else if (atrib == "HÃ­brido") {
 			resultado += "El coche con matricula " + matricula + " ";
 			resultado += metodoC(modelo, fabricante);
 		} else {
 			resultado += "El coche con matricula " + matricula + " ";
-			resultado += "no dispone de información";
+			resultado += "no dispone de informaciÃ³n";
 		}
 		return resultado;
 	}
