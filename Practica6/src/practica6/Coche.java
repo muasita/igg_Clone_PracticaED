@@ -1,10 +1,21 @@
 package practica6;
 
+/**
+ * Clase Coche
+ * @author IGG
+ * @version 2019
+*/
+
+
 public class Coche {
-	String matricula;
-	String atrib;
-	String modelo;
-	String fabricante;
+	String matricula= "";
+	String atrib= "";
+	String modelo= "";
+	String fabricante= "";
+
+	
+/*
+  ---REFACTORIZACIÓN-- ELIMINAR CODIGO DUPLICADO
 
 	public Coche() {
 		matricula = "";
@@ -19,22 +30,53 @@ public class Coche {
 		modelo = mo;
 		fabricante = f;
 	}
-
+*/
+	
+	
 	public String metodo1() {
 		String resultado = "";
+		String texto = TEXTO_INICIAL + matricula + " ";
 		if (atrib == "Gasolina") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoA(modelo, fabricante);
-		} else if (atrib == "Diesel") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoB(modelo, fabricante);
-		} else if (atrib == "H�brido") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoC(modelo, fabricante);
-		} else {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += "no dispone de informaci�n";
+			double precio=1.337;
+			resultado = texto + metodoInfoPrecio(precio);
+		} 
+		else if (atrib == "Diesel") {
+			double precio=1.052;
+			resultado = texto + metodoInfoPrecio(precio);
+		} 
+		else if (atrib == "Híbrido") {
+
+			resultado = texto + metodoNoInfoPrecio();
+		} 
+		else {
+			resultado = texto + "no dispone de información";
 		}
 		return resultado;
+	}
+	
+	//	  ---REFACTORIZACIÓN-- EXTRAER CONSTANTE
+	  
+	static final String TEXTO_INICIAL = "El coche con matricula";
+	
+    /**
+     * Metodo metodoInfoPrecio.
+     * devuelve información sobre el precio del carburante
+     * @precio indica el precio
+     * @return devuelve cadena de texto
+     */  
+	
+	public String metodoInfoPrecio(double precio) {
+		String info ="es un " + modelo + " y gasta" + precio +" euros por litro.";
+		return info;
+	}
+	
+    /**
+     * Metodo metodoNoInfoPrecio.
+     * devuelve información
+     * @return devuelve cadena de texto
+     */ 
+	public String metodoNoInfoPrecio() {
+		String info ="es un " + modelo + " y no necesita combustible";
+		return info;
 	}
 }

@@ -1,9 +1,19 @@
 package practica6;
 
-public class Moto {
-	String matricula;
-	int cilindrada;
+/**
+ * Clase Moto
+ * @author IGG
+ * @version 2019
+*/
 
+public class Moto {
+	String matricula="";
+	int cilindrada=0;
+
+	
+/* 
+---REFACTORIZACIÓN-- ELIMINAR CODIGO DUPLICADO
+	 
 	public Moto() {
 		matricula = "";
 		cilindrada = 0;
@@ -13,7 +23,8 @@ public class Moto {
 		matricula = m;
 		cilindrada = c;
 	}
-
+*/
+	
 	public String getMatricula() {
 		return matricula;
 	}
